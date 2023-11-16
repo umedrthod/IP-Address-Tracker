@@ -1,3 +1,15 @@
+/* Custom CSS styles */
+
+:root {
+    --color-black: black;
+    --color-primary: #000;
+    --color-secondary: #888;
+    --color-text: #333;
+    --color-background: #fff;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --max-width: 600px;
+}
+
 .background {
     position: absolute;
     top: 0;
@@ -14,21 +26,27 @@
 }
 
 .max-width-container {
-    max-width: 600px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
     font-weight: bold;
     font-size: 24px;
     text-align: center;
-    color: black;
+    color: var(--color-black);
     padding-bottom: 16px;
 }
 
 .search-form {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .search-input {
@@ -36,10 +54,17 @@
     padding: 8px 16px;
     border-radius: 0 4px 4px 0;
     border: none;
+    transition: width 0.3s ease-in-out;
+    max-width: 600px;
+    width: 100%;
+}
+
+.search-input:focus {
+    width: 100%;
 }
 
 .search-button {
-    background-color: #000;
+    background-color: var(--color-primary);
     padding: 8px 16px;
     border-radius: 0 4px 4px 0;
     border: none;
@@ -53,10 +78,10 @@
 }
 
 .result-container {
-    background-color: #fff;
+    background-color: var(--color-background);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 10px var(--color-shadow);
     max-width: 960px;
     margin: 0 auto;
     display: grid;
@@ -66,21 +91,25 @@
     position: relative;
     margin-bottom: -40px;
     z-index: 10000;
+    margin-top: 20px;
 }
 
 .result-container h2 {
     font-size: 14px;
     text-transform: uppercase;
-    color: #888;
+    color: var(--color-secondary);
 }
 
 .result-container p {
     font-weight: bold;
     font-size: 24px;
-    color: #333;
+    color: var(--color-text);
 }
 
 #map {
-    height: 400px;
-    width: 100%;
+    position: relative;
+    height: 800px;
+    width: 100vw;
+    margin-top: 5%;
+    display: flex;
 }

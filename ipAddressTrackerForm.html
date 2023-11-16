@@ -9,50 +9,56 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/leaflet.css">
 </head>
 <body>
-    <div class="background">
-        <img src="images/backgroundImage.png" alt="" class="w-full h-80">
-    </div>
-    <div class="max-width-container">
-        <h1 class="title">
-            IP Address Tracker
-        </h1>
+    <header>
+        <div class="background">
+            <img src="images/backgroundImage.png" alt="" class="w-full h-80">
+        </div>
+        <div class="max-width-container">
+            <h1 class="title">
+                IP Address Tracker
+            </h1>
+        </div>
+    </header>
 
-        <form onsubmit="handleSubmit(event)" autocomplete="off" class="search-form">
-            <input type="text" name="ipaddress" placeholder="Search for any IP address or domain" class="search-input">
+    <main>
+        <form id="searchForm" autocomplete="off" class="search-form">
+            <input type="text" id="ipAddressInput" name="ipaddress" placeholder="Search for any IP address or domain" class="search-input">
             <button type="submit" class="search-button">
                 <img src="images/icon-arrow.png" alt="">
             </button>
         </form>
-    </div>
 
-    <article id="result">
-        <div class="result-container">
-            <article>
-              <h2>IP Address</h2>
-              <p></p>
-            </article>
-    
-            <article>
-              <h2>Location</h2>
-              <p></p>
-            </article>
-    
-            <article>
-              <h2>Timezone</h2>
-              <p></p>
-            </article>
-    
-            <article>
-              <h2>ISP</h2>
-              <p></p>
-            </article>
-        </div>
-    </article>
+        <section id="result">
+            <div class="result-container">
+                <article>
+                    <h2>IP Address</h2>
+                    <p id="ipAddress"></p>
+                </article>
 
-    <div id="map" class="map"></div>
+                <article>
+                    <h2>Location</h2>
+                    <p id="location"></p>
+                </article>
 
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script.js"></script>
-    <script src="leaflet.js"></script>
+                <article>
+                    <h2>Timezone</h2>
+                    <p id="timezone"></p>
+                </article>
+
+                <article>
+                    <h2>ISP</h2>
+                    <p id="isp"></p>
+                </article>
+            </div>
+        </section>
+
+        <div id="map" class="map"></div>
+    </main>
+
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="script.js"></script>
+        <script src="leaflet.js"></script>
+    </footer>
 </body>
 </html>
