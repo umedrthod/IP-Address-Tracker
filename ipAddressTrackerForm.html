@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/leaflet.css">
+</head>
+<body>
+    <div class="background">
+        <img src="images/backgroundImage.png" alt="" class="w-full h-80">
+    </div>
+    <div class="max-width-container">
+        <h1 class="title">
+            IP Address Tracker
+        </h1>
+
+        <form onsubmit="handleSubmit(event)" autocomplete="off" class="search-form">
+            <input type="text" name="ipaddress" placeholder="Search for any IP address or domain" class="search-input">
+            <button type="submit" class="search-button">
+                <img src="images/icon-arrow.png" alt="">
+            </button>
+        </form>
+    </div>
+
+    <article id="result">
+        <div class="result-container">
+            <article>
+              <h2>IP Address</h2>
+              <p></p>
+            </article>
+    
+            <article>
+              <h2>Location</h2>
+              <p></p>
+            </article>
+    
+            <article>
+              <h2>Timezone</h2>
+              <p></p>
+            </article>
+    
+            <article>
+              <h2>ISP</h2>
+              <p></p>
+            </article>
+        </div>
+    </article>
+
+    <div id="map" class="map"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script src="leaflet.js"></script>
+</body>
+</html>
